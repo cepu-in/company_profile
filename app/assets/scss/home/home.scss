@@ -1,0 +1,96 @@
+.cep-content {
+    .cep-content-welcome {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .cep-content-welcome-left {
+            h1 {
+                font-weight: bold;
+                font-style: normal;
+                font-size: 50px;
+                color: white;
+                width: 555px;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                width: 463px;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 18px;
+                color: white;
+                margin-top: 3rem;
+            }
+        }
+
+        .cep-content-welcome-right {}
+    }
+
+    .cep-content-feature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 6rem;
+        gap: 2rem;
+
+        .cep-content-feature-item {
+            background-color: #222938;
+            border-radius: 20px;
+            padding: 1rem 2.5rem;
+
+            h3 {
+                font-weight: bold;
+                font-style: normal;
+                font-size: 20px;
+                color: white;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-weight: 400;
+                font-style: normal;
+                font-size: 18px;
+                color: white;
+            }
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 2rem;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+
+    .cep-content-partner {
+        text-align: center;
+        margin-top: 9rem;
+
+        h1 {
+            font-weight: bolder;
+            font-style: normal;
+            font-size: 48px;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            color: white;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .cep-content-partner-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+}
