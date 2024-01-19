@@ -13,7 +13,7 @@ export default function FooterComponents() {
                         <h3>PT. Segen Digital Indonesia</h3>
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elem
+                        We specialize in cutting-edge solutions in Innovative Web, Mobile & Blockchain Development. We transform ideas into impactful web platforms, seamless mobile applications, and secure blockchain solutions.
                     </p>
                 </div>
                 <div className="cep-footer-menu">

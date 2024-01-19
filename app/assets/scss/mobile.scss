@@ -1,0 +1,109 @@
+$primaryColor: #F9C554;
+$softPrimaryColor: #f9d079;
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .cep-header {
+        padding: 20px;
+
+        .cep-header-burger {
+            display: block;
+            margin-right: 10px;
+        }
+
+        .cep-header-menu {
+            display: none;
+        }
+
+        .cep-header-mobile {
+            display: block;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #ffebc1;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 40px;
+            border-left: 1px solid #f9d079;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: $primaryColor;
+                font-size: 13px;
+                font-weight: 600;
+                padding: 8px 8px 8px 30px;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $softPrimaryColor;
+                }
+            }
+
+            span {
+                cursor: pointer;
+            }
+
+            .cep-close-button {
+                position: absolute;
+                top: 10px;
+                font-size: 50px;
+                right: 10px;
+                color: $primaryColor;
+                background-color: transparent;
+                padding: 10px;
+                line-height: 30px;
+                border: unset;
+            }
+        }
+    }
+
+    .cep-content-welcome {
+        flex-direction: column;
+
+        .cep-content-welcome-left {
+            text-align: left;
+            padding: 0 30px;
+
+            h1 {
+                font-size: 25px !important;
+                width: 280px !important;
+            }
+
+            img {
+                width: 75%;
+            }
+
+            p {
+                font-size: 13px !important;
+                width: 290px !important;
+                margin-top: 1.5rem !important;
+            }
+        }
+
+        .cep-content-welcome-right {
+            padding: 0 30px;
+
+            img {
+                margin-top: 2rem;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {}

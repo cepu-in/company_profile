@@ -3,6 +3,9 @@
 @import "./service/service.scss";
 @import "./contact/contact.scss";
 
+$primaryColor: #F9C554;
+$softPrimaryColor: #f9d079;
+
 body {
     background-color: #161C28;
 }
@@ -21,6 +24,14 @@ a {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2.5rem;
+
+    .cep-header-burger {
+        display: none;
+    }
+
+    .cep-header-mobile {
+        display: none;
+    }
 
     .cep-header-menu {
         display: flex;
