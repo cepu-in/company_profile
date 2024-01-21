@@ -15,12 +15,12 @@ export default function About() {
                     </div>
                     <div className="cep-service-feature">
                         <div className="row mb-4">
-                            <div className="col-12 col-md-4">
+                            <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
                                     <img src={"/website_development.png"} alt="Website Development" />
                                 </div>
                             </div>
-                            <div className="col-12 col-md-8">
+                            <div className="col-8 col-md-8">
                                 <div className="cep-service-feature-desc">
                                     <h3>Website Development</h3>
                                     <p>
@@ -30,7 +30,7 @@ export default function About() {
                             </div>
                         </div>
                         <div className="row mb-4">
-                            <div className="col-12 col-md-8">
+                            <div className="col-8 col-md-8">
                                 <div className="cep-service-feature-desc">
                                     <h3>Mobile Development</h3>
                                     <p>
@@ -38,19 +38,19 @@ export default function About() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="col-12 col-md-4">
+                            <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
                                     <img src={"/mobile_development.png"} alt="Mobile Development" />
                                 </div>
                             </div>
                         </div>
                         <div className="row mb-4">
-                            <div className="col-12 col-md-4">
+                            <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
                                     <img src={"/blockchain.png"} alt="Blockchain" />
                                 </div>
                             </div>
-                            <div className="col-12 col-md-8">
+                            <div className="col-8 col-md-8">
                                 <div className="cep-service-feature-desc">
                                     <h3>Blockchain</h3>
                                     <p>
@@ -60,7 +60,7 @@ export default function About() {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-12 col-md-8">
+                            <div className="col-8 col-md-8">
                                 <div className="cep-service-feature-desc">
                                     <h3>Dev Ops & Maintenance</h3>
                                     <p>
@@ -68,7 +68,7 @@ export default function About() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="col-12 col-md-4">
+                            <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
                                     <img src={"/dev_ops.png"} alt="Dev Ops & Maintenance" />
                                 </div>
