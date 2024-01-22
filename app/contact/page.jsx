@@ -43,7 +43,7 @@ export default function About() {
                         </div>
                     </div>
                     <div className="cep-contact-us">
-                        <img src={"/contact_us.png"} alt="Contact Us" />
+                        <Image src={"/contact_us.png"} layout='fill' objectFit='contain' alt="Contact Us" />
                     </div>
                 </div>
             </div>

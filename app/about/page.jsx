@@ -19,8 +19,8 @@ export default function About() {
 
                     <div className="cep-about-vision">
                         <div className="cep-about-vision-overlay">
-                            <img src={"/bg_vision.png"} alt="Background Vision" className="d-none d-sm-block" />
-                            <img src={"/bg_vision_mobile.png"} alt="Background Vision Mobile" className="d-block d-sm-none" />
+                            <Image src={"/bg_vision.png"} layout='fill' objectFit='contain' alt="Background Vision" className="d-none d-sm-block" />
+                            <Image src={"/bg_vision_mobile.png"} layout='fill' objectFit='contain' alt="Background Vision Mobile" className="d-block d-sm-none" />
                         </div>
                         <div className="row align-items-center">
                             <div className="col-12 col-md-5">
