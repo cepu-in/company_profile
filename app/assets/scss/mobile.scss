@@ -113,6 +113,10 @@ $reverseSoftPrimaryColor: #292e39;
         flex-direction: column;
         padding: 0 30px;
 
+        .row {
+            gap: 1rem;
+        }
+
         .cep-content-feature-item {
             h3 {
                 font-size: 14px !important;

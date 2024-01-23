@@ -17,7 +17,7 @@ export default function About() {
                         <div className="row mb-4">
                             <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
-                                    <img src={"/website_development.png"} alt="Website Development" />
+                                    <Image src={"/website_development.png"} layout="fill" objectFit="contain" alt="Website Development" />
                                 </div>
                             </div>
                             <div className="col-8 col-md-8">
@@ -40,14 +40,14 @@ export default function About() {
                             </div>
                             <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
-                                    <img src={"/mobile_development.png"} alt="Mobile Development" />
+                                    <Image src={"/mobile_development.png"} layout="fill" objectFit="contain" alt="Mobile Development" />
                                 </div>
                             </div>
                         </div>
                         <div className="row mb-4">
                             <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
-                                    <img src={"/blockchain.png"} alt="Blockchain" />
+                                    <Image src={"/blockchain.png"} layout="fill" objectFit="contain" alt="Blockchain" />
                                 </div>
                             </div>
                             <div className="col-8 col-md-8">
@@ -70,7 +70,7 @@ export default function About() {
                             </div>
                             <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
-                                    <img src={"/dev_ops.png"} alt="Dev Ops & Maintenance" />
+                                    <Image src={"/dev_ops.png"} layout="fill" objectFit="contain" alt="Dev Ops & Maintenance" />
                                 </div>
                             </div>
                         </div>

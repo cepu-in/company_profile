@@ -21,20 +21,28 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="cep-content-feature container">
-                    <div className="cep-content-feature-item">
-                        <Image src={"/uptime.png"} alt="Uptime" width={"85"} height={"85"} />
-                        <h3>99.9% Uptime</h3>
-                        <p>We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors but also damages your reputation and search engine rankings.</p>
-                    </div>
-                    <div className="cep-content-feature-item">
-                        <Image src={"/assurance.png"} alt="Assurance" width={"85"} height={"85"} />
-                        <h3>Quality Assurance</h3>
-                        <p>We guarantee 99.9% uptime, ensuring your digital presence remains consistently available. Trust us to keep your business running smoothly, day after day.</p>
-                    </div>
-                    <div className="cep-content-feature-item">
-                        <Image src={"/reliability.png"} alt="Reliability" width={"85"} height={"85"} />
-                        <h3>Reliability</h3>
-                        <p>Trust is paramount in technology. We guarantee reliability, so you can focus on growing your business with peace of mind. Experience the power of reliability with our services. </p>
+                    <div className="row">
+                        <div className="col-12 col-md-4">
+                            <div className="cep-content-feature-item">
+                                <Image src={"/uptime.png"} alt="Uptime" width={"85"} height={"85"} />
+                                <h3>99.9% Uptime</h3>
+                                <p>We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors but also damages your reputation and search engine rankings.</p>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-4">
+                            <div className="cep-content-feature-item">
+                                <Image src={"/assurance.png"} alt="Assurance" width={"85"} height={"85"} />
+                                <h3>Quality Assurance</h3>
+                                <p>We guarantee 99.9% uptime, ensuring your digital presence remains consistently available. Trust us to keep your business running smoothly, day after day.</p>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-4">
+                            <div className="cep-content-feature-item">
+                                <Image src={"/reliability.png"} alt="Reliability" width={"85"} height={"85"} />
+                                <h3>Reliability</h3>
+                                <p>Trust is paramount in technology. We guarantee reliability, so you can focus on growing your business with peace of mind. Experience the power of reliability with our services. </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="cep-content-partner container">
