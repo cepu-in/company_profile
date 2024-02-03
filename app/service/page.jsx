@@ -9,15 +9,15 @@ export default function About() {
             <div className="cep-service">
                 <div className="container">
                     <div className="cep-service-welcome">
-                        <Image src={"/service_screen.png"} alt="Service Screen" width={"516"} height={"377"} className="mb-3" />
+                        <Image unoptimized src={"/images/service_screen.png"} alt="Service Screen" width={"516"} height={"377"} className="mb-3" />
                         <h1>Services</h1>
-                        <Image src={"/break_line.png"} alt="Break Line" width={"479"} height={"26"} className="mb-2" />
+                        <Image unoptimized src={"/images/break_line.png"} alt="Break Line" width={"479"} height={"26"} className="mb-2" />
                     </div>
                     <div className="cep-service-feature">
                         <div className="row mb-4">
                             <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
-                                    <Image src={"/website_development.png"} layout="fill" objectFit="contain" alt="Website Development" />
+                                    <Image unoptimized src={"/images/website_development.png"} layout="fill" objectFit="contain" alt="Website Development" />
                                 </div>
                             </div>
                             <div className="col-8 col-md-8">
@@ -40,14 +40,14 @@ export default function About() {
                             </div>
                             <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
-                                    <Image src={"/mobile_development.png"} layout="fill" objectFit="contain" alt="Mobile Development" />
+                                    <Image unoptimized src={"/images/mobile_development.png"} layout="fill" objectFit="contain" alt="Mobile Development" />
                                 </div>
                             </div>
                         </div>
                         <div className="row mb-4">
                             <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
-                                    <Image src={"/blockchain.png"} layout="fill" objectFit="contain" alt="Blockchain" />
+                                    <Image unoptimized src={"/images/blockchain.png"} layout="fill" objectFit="contain" alt="Blockchain" />
                                 </div>
                             </div>
                             <div className="col-8 col-md-8">
@@ -70,7 +70,7 @@ export default function About() {
                             </div>
                             <div className="col-4 col-md-4">
                                 <div className="cep-service-feature-img">
-                                    <Image src={"/dev_ops.png"} layout="fill" objectFit="contain" alt="Dev Ops & Maintenance" />
+                                    <Image unoptimized src={"/images/dev_ops.png"} layout="fill" objectFit="contain" alt="Dev Ops & Maintenance" />
                                 </div>
                             </div>
                         </div>
@@ -79,5 +79,5 @@ export default function About() {
             </div>
             <FooterComponents />
         </main>
-    )
+    );
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Button, CloseButton } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { ReactSVG } from "react-svg";
 
 export default function HeaderComponents() {
@@ -36,7 +36,7 @@ export default function HeaderComponents() {
                 </Link>
             </>
         );
-    }
+    };
 
     useEffect(() => {
         console.log(pathname);
@@ -44,7 +44,7 @@ export default function HeaderComponents() {
 
     return (
         <div className="cep-header container">
-            <Image src={"/logo.png"} alt="Logo" width={"67"} height={"62"} priority={true} />
+            <Image unoptimized src={"/images/logo.png"} alt="Logo" width={"67"} height={"62"} priority={true} />
             <div className="cep-header-menu">
                 <MenuBar />
             </div>
@@ -54,5 +54,5 @@ export default function HeaderComponents() {
             </div>
             <ReactSVG src={"/svg/burger.svg"} className="cep-header-burger" onClick={() => openSideBarMenu()} />
         </div>
-    )
+    );
 }

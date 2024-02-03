@@ -7,7 +7,7 @@ import HeaderComponents from "../components/home/header";
 export default function About() {
     const onSubmit = () => {
         alert("Click!");
-    }
+    };
 
     return (
         <main>
@@ -38,16 +38,16 @@ export default function About() {
                         </div>
                         <div className="col-12 col-md-4">
                             <div className="cep-contact-img">
-                                <Image src={"/form_contact.png"} alt="Form Contact" width={"516"} height={"500"} />
+                                <Image unoptimized src={"/images/form_contact.png"} alt="Form Contact" width={"516"} height={"500"} />
                             </div>
                         </div>
                     </div>
                     <div className="cep-contact-us">
-                        <Image src={"/contact_us.png"} layout='fill' objectFit='contain' alt="Contact Us" />
+                        <Image unoptimized src={"/images/contact_us.png"} layout='fill' objectFit='contain' alt="Contact Us" />
                     </div>
                 </div>
             </div>
             <FooterComponents />
         </main>
-    )
+    );
 }

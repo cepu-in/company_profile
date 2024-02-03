@@ -9,9 +9,9 @@ export default function About() {
             <div className="cep-about">
                 <div className="container">
                     <div className="cep-about-welcome">
-                        <Image src={"/about_screen.png"} alt="About Screen" width={"516"} height={"377"} className="mb-3" />
+                        <Image unoptimized src={"/images/about_screen.png"} alt="About Screen" width={"516"} height={"377"} className="mb-3" />
                         <h1>Better living with technology</h1>
-                        <Image src={"/break_line.png"} alt="Break Line" width={"479"} height={"26"} className="mb-2" />
+                        <Image unoptimized src={"/images/break_line.png"} alt="Break Line" width={"479"} height={"26"} className="mb-2" />
                         <p>
                             We are doing our best to participate in the technological reforms required by Indonesia, by providing the necessary technological solutions to various companies in order to embrace the future and address various challenges, aiming to realize an effective and efficient company in conducting business activities."
                         </p>
@@ -19,12 +19,12 @@ export default function About() {
 
                     <div className="cep-about-vision">
                         <div className="cep-about-vision-overlay">
-                            <Image src={"/bg_vision.png"} layout='fill' objectFit='contain' alt="Background Vision" className="d-none d-sm-block" />
-                            <Image src={"/bg_vision_mobile.png"} layout='fill' objectFit='contain' alt="Background Vision Mobile" className="d-block d-sm-none" />
+                            <Image unoptimized src={"/images/bg_vision.png"} layout='fill' objectFit='contain' alt="Background Vision" className="d-none d-sm-block" />
+                            <Image unoptimized src={"/images/bg_vision_mobile.png"} layout='fill' objectFit='contain' alt="Background Vision Mobile" className="d-block d-sm-none" />
                         </div>
                         <div className="row align-items-center">
                             <div className="col-12 col-md-5">
-                                <Image src={"/screen_vision.png"} alt="Screen Vision" width={"425"} height={"425"} />
+                                <Image unoptimized src={"/images/screen_vision.png"} alt="Screen Vision" width={"425"} height={"425"} />
                             </div>
                             <div className="col-12 col-md-7">
                                 <div className="cep-about-vision-box mb-4">
@@ -69,7 +69,7 @@ export default function About() {
                             </div>
                             <div className="col-12 col-md-5">
                                 <h2>Our Values</h2>
-                                <Image src={"/our_values.png"} alt="Our Values" width={"515"} height={"515"} />
+                                <Image unoptimized src={"/images/our_values.png"} alt="Our Values" width={"515"} height={"515"} />
                             </div>
                         </div>
                     </div>
@@ -77,5 +77,5 @@ export default function About() {
             </div>
             <FooterComponents />
         </main>
-    )
+    );
 }
