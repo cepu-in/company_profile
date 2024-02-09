@@ -38,7 +38,7 @@ export default function FooterComponents() {
             <div className='cep-footer-contact-list-img'>
               <Image unoptimized src={'/images/call.png'} alt='Call' width={'20'} height={'20'} />
             </div>
-            <Link href={`https://web.whatsapp.com/send?phone=+6281219971327`}>
+            <Link href={`tel:${+6281219971327}`}>
               <p>+62 812-1997-1327</p>
             </Link>
           </div>
