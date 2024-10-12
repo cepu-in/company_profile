@@ -1,0 +1,358 @@
+$primaryColor: #F9C554;
+$softPrimaryColor: #f9d079;
+
+$reversePrimaryColor: #222938;
+$reverseSoftPrimaryColor: #292e39;
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .cep-header {
+        padding: 20px 30px;
+
+        img {
+            width: 50px;
+            height: 45px;
+        }
+
+        .cep-header-burger {
+            display: block;
+            margin-right: 10px;
+        }
+
+        .cep-header-menu {
+            display: none;
+        }
+
+        .cep-header-mobile {
+            display: block;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #ffebc1;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 40px;
+            border-left: 1px solid #f9d079;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: $reversePrimaryColor;
+                font-size: 13px;
+                font-weight: 600;
+                padding: 8px 8px 8px 30px;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+
+            .active {
+                span {
+                    border-bottom: 3px solid $primaryColor;
+                }
+            }
+
+            span {
+                cursor: pointer;
+            }
+
+            .cep-close-button {
+                position: absolute;
+                top: 10px;
+                font-size: 50px;
+                right: 10px;
+                color: $primaryColor;
+                background-color: transparent;
+                padding: 10px;
+                line-height: 30px;
+                border: unset;
+            }
+        }
+    }
+
+    .cep-content-welcome {
+        flex-direction: column;
+
+        .cep-content-welcome-left {
+            text-align: left;
+            padding: 0 30px;
+
+            h1 {
+                font-size: 25px !important;
+                width: 280px !important;
+            }
+
+            img {
+                width: 75%;
+            }
+
+            p {
+                font-size: 13px !important;
+                width: 290px !important;
+                margin-top: 1.5rem !important;
+            }
+        }
+
+        .cep-content-welcome-right {
+            padding: 0 30px;
+
+            img {
+                margin-top: 2rem;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .cep-content-feature {
+        flex-direction: column;
+        padding: 0 30px;
+
+        .row {
+            gap: 1rem;
+        }
+
+        .cep-content-feature-item {
+            h3 {
+                font-size: 14px !important;
+            }
+
+            p {
+                font-size: 13px !important;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    .cep-content-partner {
+        padding: 0 30px;
+        margin-top: 4rem !important;
+
+        h1 {
+            font-size: 28px !important;
+            margin-bottom: 1.2rem !important;
+        }
+
+        p {
+            font-size: 13px !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .cep-content-partner-logo {
+            // flex-direction: column;
+
+            img {
+                width: 100px;
+                height: auto;
+            }
+        }
+    }
+
+    .cep-about {
+        padding: 20px 30px;
+
+        .cep-about-welcome {
+            margin-bottom: 2rem !important;
+
+            h1 {
+                font-size: 25px !important;
+                width: 280px !important;
+            }
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+
+            p {
+                font-size: 13px !important;
+                width: 375px !important;
+                margin-top: 1.5rem !important;
+            }
+        }
+
+        .cep-about-vision {
+            padding: 2rem;
+            margin-bottom: 3rem !important;
+
+            .cep-about-vision-overlay {}
+
+            .row {
+                flex-direction: column;
+
+                img {
+                    display: block;
+                    width: 70%;
+                    height: auto;
+                    margin: 0 auto;
+                    margin-bottom: 1.5rem;
+                }
+
+                .cep-about-vision-box {
+                    padding: 1.5rem;
+
+                    h3 {
+                        font-size: 22px !important;
+                        margin-bottom: 0.7rem !important;
+                    }
+
+                    p {
+                        font-size: 13px !important;
+                    }
+                }
+            }
+        }
+
+        .cep-about-values {
+            .row {
+                flex-direction: column-reverse;
+
+                h2 {
+                    font-size: 26px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 2rem;
+                }
+
+                .cep-about-values-step {
+                    .cep-about-values-step-item {
+                        h3 {
+                            font-size: 17px !important;
+                        }
+
+                        p {
+                            font-size: 14px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cep-service {
+        padding: 20px 30px;
+
+        .cep-service-welcome {
+            margin-bottom: 2rem !important;
+
+            h1 {
+                font-size: 25px !important;
+                width: 280px !important;
+                margin-top: 2rem;
+            }
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+
+            p {
+                font-size: 13px !important;
+                width: 375px !important;
+                margin-top: 1.5rem !important;
+            }
+        }
+
+        .cep-service-feature {
+            .row {
+                // gap: .5rem;
+            }
+
+            .col-4,
+            .col-8 {
+                padding: 0 .2rem;
+            }
+
+            .cep-service-feature-desc {
+                padding: 15px;
+
+                h3 {
+                    font-size: 13px !important;
+                    margin-bottom: .5rem !important;
+                }
+
+                p {
+                    font-size: 10px !important;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .cep-contact {
+        .row {
+            flex-direction: column-reverse;
+
+            .cep-contact-form {
+                h2 {
+                    font-size: 30px !important;
+                }
+
+                p {
+                    font-size: 14px !important;
+                }
+
+                .cep-contact-form-control {
+                    label {
+                        font-size: 13px !important;
+                    }
+
+                    input {
+                        font-size: 13px !important;
+                    }
+                }
+
+                button {
+                    font-size: 14px !important;
+                }
+            }
+
+            .cep-contact-img {
+                margin-bottom: 3rem;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .cep-contact-us {
+            padding: 0 20px;
+        }
+    }
+
+    .cep-footer {
+        margin-top: 3rem;
+
+        .container {
+            flex-direction: column;
+            padding: 0 30px;
+            gap: 3rem !important;
+        }
+    }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {}

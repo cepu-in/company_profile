@@ -1,0 +1,73 @@
+.cep-service {
+    .cep-service-welcome {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 5rem;
+
+        h1 {
+            font-weight: bold;
+            font-style: normal;
+            font-size: 50px;
+            color: white;
+            width: 828px;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            width: 100%;
+            max-width: 901px;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            color: white;
+            margin-top: 3rem;
+        }
+    }
+
+    .cep-service-feature {
+        .cep-service-feature-img {
+            width: 100%;
+            height: 100%;
+
+            img {
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: relative !important;
+            }
+        }
+
+        .cep-service-feature-desc {
+            background-color: #222938;
+            border-radius: 10px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            h3 {
+                font-weight: bold;
+                font-style: normal;
+                font-size: 30px;
+                color: #F9C554;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+
+            p {
+                width: 100%;
+                max-width: 489px;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 18px;
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.cep-contact {
+    .cep-contact-form {
+        h2 {
+            font-weight: bold;
+            font-style: normal;
+            font-size: 50px;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            width: 100%;
+            max-width: 580px;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 18px;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .cep-contact-form-control {
+            label {
+                font-weight: 400;
+                font-style: normal;
+                font-size: 15px;
+                color: white;
+                width: 100%;
+                max-width: 505px;
+                margin-bottom: .7rem;
+            }
+
+            input, textarea {
+                width: 100%;
+                max-width: 505px;
+                padding: 15px 25px;
+                background-color: #222938;
+                border: 1px solid #8D8D8D;
+                border-radius: 8px;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 16px;
+                color: white;
+            }
+        }
+
+        button {
+            background-color: #F88B30;
+            padding: 10px 30px;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .cep-contact-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cep-contact-us {
+        width: 100%;
+        display: block;
+        margin-top: 6rem;
+
+        img {
+            position: relative !important;
+            width: 100%;
+        }
+    }
+}
