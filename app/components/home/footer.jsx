@@ -37,14 +37,14 @@ export default function FooterComponents() {
                         <div className="cep-footer-contact-list-img">
                             <Image src={"/call.png"} alt="Call" width={"20"} height={"20"} />
                         </div>
-                        <p>+62 812-1997-1327</p>
+                        <p>+62 852-8326-6184</p>
                     </div>
                     <div className="cep-footer-contact-list">
                         <div className="cep-footer-contact-list-img">
                             <Image src={"/message.png"} alt="Message" width={"20"} height={"20"} />
                         </div>
-                        <Link href={"mailto:segendigitalindonesia@gmail.com"}>
-                            <p className="text-underline">segendigitalindonesia@gmail.com</p>
+                        <Link href={"mailto:admin@segendigitalindonesia.id"}>
+                            <p className="text-underline">admin@segendigitalindonesia.id</p>
                         </Link>
                     </div>
                     <div className="cep-footer-contact-list">
