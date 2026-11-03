@@ -6,74 +6,41 @@ export default function About() {
     return (
         <main>
             <HeaderComponents />
-            <div className="cep-service">
+            <div className="cep-service" data-page-enter>
                 <div className="container">
                     <div className="cep-service-welcome">
-                        <Image src={"/service_screen.png"} alt="Service Screen" width={"516"} height={"377"} className="mb-3" />
-                        <h1>Services</h1>
+                        <Image data-entrance="image" src={"/service_screen.png"} alt="Service Screen" width={"516"} height={"377"} className="mb-3" />
+                        <h1 data-entrance="heading">Services</h1>
                         <Image src={"/break_line.png"} alt="Break Line" width={"479"} height={"26"} className="mb-2" />
                     </div>
-                    <div className="cep-service-feature">
-                        <div className="row mb-4">
-                            <div className="col-4 col-md-4">
-                                <div className="cep-service-feature-img">
-                                    <Image src={"/website_development.png"} layout="fill" objectFit="contain" alt="Website Development" />
-                                </div>
+                    <div className="cep-service-feature cep-service-grid">
+                        <article className="cep-service-card" data-reveal="card" data-motion-delay="0">
+                            <div className="cep-service-card-image">
+                                <Image src="/website_development.png" alt="Website Development" width={502} height={406} sizes="(min-width: 1400px) 416px, (min-width: 992px) 33vw, 100vw" />
                             </div>
-                            <div className="col-8 col-md-8">
-                                <div className="cep-service-feature-desc">
-                                    <h3>Website Development</h3>
-                                    <p>
-                                        Web Development can range from developing a simple single static page of plain text to complex web application electronic busiesses
-                                    </p>
-                                </div>
+                            <div className="cep-service-feature-desc">
+                                <h3>Website Development</h3>
+                                <p>Web Development can range from developing a simple single static page of plain text to complex web application electronic busiesses</p>
                             </div>
-                        </div>
-                        <div className="row mb-4">
-                            <div className="col-8 col-md-8">
-                                <div className="cep-service-feature-desc">
-                                    <h3>Mobile Development</h3>
-                                    <p>
-                                        Mobile development is the process of designing, building, and implementing software application
-                                    </p>
-                                </div>
+                        </article>
+                        <article className="cep-service-card" data-reveal="card" data-motion-delay="220">
+                            <div className="cep-service-card-image">
+                                <Image src="/mobile_development.png" alt="Mobile Development" width={502} height={406} sizes="(min-width: 1400px) 416px, (min-width: 992px) 33vw, 100vw" />
                             </div>
-                            <div className="col-4 col-md-4">
-                                <div className="cep-service-feature-img">
-                                    <Image src={"/mobile_development.png"} layout="fill" objectFit="contain" alt="Mobile Development" />
-                                </div>
+                            <div className="cep-service-feature-desc">
+                                <h3>Mobile Development</h3>
+                                <p>Mobile development is the process of designing, building, and implementing software application</p>
                             </div>
-                        </div>
-                        <div className="row mb-4">
-                            <div className="col-4 col-md-4">
-                                <div className="cep-service-feature-img">
-                                    <Image src={"/blockchain.png"} layout="fill" objectFit="contain" alt="Blockchain" />
-                                </div>
+                        </article>
+                        <article className="cep-service-card" data-reveal="card" data-motion-delay="440">
+                            <div className="cep-service-card-image">
+                                <Image src="/dev_ops.png" alt="Dev Ops & Maintenance" width={502} height={406} sizes="(min-width: 1400px) 416px, (min-width: 992px) 33vw, 100vw" />
                             </div>
-                            <div className="col-8 col-md-8">
-                                <div className="cep-service-feature-desc">
-                                    <h3>Blockchain</h3>
-                                    <p>
-                                        We strive to make blockchain accessible, secure, and efficient, paving the way for a more transparent and decentralized future.
-                                    </p>
-                                </div>
+                            <div className="cep-service-feature-desc">
+                                <h3>Dev Ops & Maintenance</h3>
+                                <p>Your digital journey doesn't end with project delivery. We provide ongoing maintenance and support to keep your digital assets running smoothly and securely.</p>
                             </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-8 col-md-8">
-                                <div className="cep-service-feature-desc">
-                                    <h3>Dev Ops & Maintenance</h3>
-                                    <p>
-                                        Your digital journey doesn't end with project delivery. We provide ongoing maintenance and support to keep your digital assets running smoothly and securely.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-4 col-md-4">
-                                <div className="cep-service-feature-img">
-                                    <Image src={"/dev_ops.png"} layout="fill" objectFit="contain" alt="Dev Ops & Maintenance" />
-                                </div>
-                            </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>

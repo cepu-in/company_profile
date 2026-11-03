@@ -7,37 +7,37 @@ export default function Home() {
     return (
         <main>
             <HeaderComponents />
-            <div className="cep-content">
+            <div className="cep-content" data-page-enter>
                 <div className="cep-content-welcome container">
                     <div className="cep-content-welcome-left">
-                        <h1>
-                            Innovative Web, Mobile & Blockchain Development
+                        <h1 data-entrance="heading">
+                            Innovative Web & Mobile Development
                         </h1>
                         <Image src={"/break_line.png"} alt="Break Line" width={"479"} height={"26"} />
-                        <p>Blazing fast web development for individuals and businesses of all sizes.</p>
+                        <p data-entrance="description">Blazing fast web development for individuals and businesses of all sizes.</p>
                     </div>
-                    <div className="cep-content-welcome-right">
+                    <div className="cep-content-welcome-right" data-entrance="image">
                         <Image src={"/develop_screen.png"} alt="Develop Screen" width={"552"} height={"431"} />
                     </div>
                 </div>
                 <div className="cep-content-feature container">
                     <div className="row">
                         <div className="col-12 col-md-4">
-                            <div className="cep-content-feature-item">
+                            <div className="cep-content-feature-item" data-reveal="card" data-motion-delay="0">
                                 <Image src={"/uptime.png"} alt="Uptime" width={"85"} height={"85"} />
                                 <h3>99.9% Uptime</h3>
                                 <p>We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors but also damages your reputation and search engine rankings.</p>
                             </div>
                         </div>
                         <div className="col-12 col-md-4">
-                            <div className="cep-content-feature-item">
+                            <div className="cep-content-feature-item" data-reveal="card" data-motion-delay="220">
                                 <Image src={"/assurance.png"} alt="Assurance" width={"85"} height={"85"} />
                                 <h3>Quality Assurance</h3>
                                 <p>We guarantee 99.9% uptime, ensuring your digital presence remains consistently available. Trust us to keep your business running smoothly, day after day.</p>
                             </div>
                         </div>
                         <div className="col-12 col-md-4">
-                            <div className="cep-content-feature-item">
+                            <div className="cep-content-feature-item" data-reveal="card" data-motion-delay="440">
                                 <Image src={"/reliability.png"} alt="Reliability" width={"85"} height={"85"} />
                                 <h3>Reliability</h3>
                                 <p>Trust is paramount in technology. We guarantee reliability, so you can focus on growing your business with peace of mind. Experience the power of reliability with our services. </p>
@@ -46,12 +46,18 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="cep-content-partner container">
-                    <h1>Our Partner</h1>
-                    <p>"We are doing our best to participate in the technological reforms required in Indonesia, by providing the necessary technological solutions to various companies in order to embrace the future and address various challenges, aiming to realize an effective and efficient company in conducting business activities."</p>
+                    <h1 data-reveal="heading">Our Partner</h1>
+                    <p data-reveal="description">"We are doing our best to participate in the technological reforms required in Indonesia, by providing the necessary technological solutions to various companies in order to embrace the future and address various challenges, aiming to realize an effective and efficient company in conducting business activities."</p>
                     <div className="cep-content-partner-logo">
-                        <Image src={"/sthiragita.png"} alt="Sthiragita" width={"248"} height={"70"} />
-                        <Image src={"/hergana.png"} alt="Hergana" width={"155"} height={"155"} />
-                        <Image src={"/cepuin.png"} alt="Cepuin" width={"89"} height={"83"} />
+                        <Image data-reveal="left" data-motion-delay="0" src={"/sthiragita.png"} alt="Sthiragita" width={"248"} height={"70"} />
+                        <Image data-reveal="right" data-motion-delay="220" src={"/hergana.png"} alt="Hergana" width={"155"} height={"155"} />
+                        <Image data-reveal="left" data-motion-delay="440" src={"/cepuin.png"} alt="Cepuin" width={"89"} height={"83"} />
+                        <a className="cep-partner-partituro" data-reveal="right" data-motion-delay="660" href="https://partituro.com" target="_blank" rel="noopener noreferrer">
+                            <span className="cep-partner-partituro-icon" aria-hidden="true">
+                                <Image src="/music-2.svg" alt="" width={23} height={23} />
+                            </span>
+                            <span>Partituro</span>
+                        </a>
                     </div>
                 </div>
             </div>

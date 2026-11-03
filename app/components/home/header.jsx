@@ -3,56 +3,65 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Button, CloseButton } from "react-bootstrap";
-import { ReactSVG } from "react-svg";
+import { useEffect, useRef, useState } from "react";
+import Motion from "./motion";
+
+const links = [["/", "Home"], ["/about", "About"], ["/service", "Service"], ["/contact", "Contact Us"]];
 
 export default function HeaderComponents() {
-    const [sideBar, setSideBar] = useState(0);
+    const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
-
-    const openSideBarMenu = () => {
-        setSideBar(50);
-    };
-
-    const closeSideBarMenu = () => {
-        setSideBar(0);
-    };
-
-    const MenuBar = () => {
-        return (
-            <>
-                <Link href={"/"} className={`${pathname === "/" ? "active" : ""}`}>
-                    <span>Home</span>
-                </Link>
-                <Link href={"/about"} className={`${pathname === "/about" ? "active" : ""}`}>
-                    <span>About</span>
-                </Link>
-                <Link href={"/service"} className={`${pathname === "/service" ? "active" : ""}`}>
-                    <span>Service</span>
-                </Link>
-                <Link href={"/contact"} className={`${pathname === "/contact" ? "active" : ""}`}>
-                    <span>Contact Us</span>
-                </Link>
-            </>
-        );
-    }
+    const toggle = useRef(null);
+    const menu = useRef(null);
 
     useEffect(() => {
-        console.log(pathname);
-    }, [pathname]);
+        const update = () => setScrolled(window.scrollY > 16);
+        update();
+        window.addEventListener("scroll", update, { passive: true });
+        return () => window.removeEventListener("scroll", update);
+    }, []);
+
+    useEffect(() => {
+        if (!open) return;
+        const dismiss = (event) => {
+            if (event.key === "Escape") { setOpen(false); toggle.current?.focus(); }
+            if (event.type === "pointerdown" && !menu.current?.contains(event.target) && !toggle.current?.contains(event.target)) setOpen(false);
+        };
+        const desktop = window.matchMedia("(min-width: 768px)");
+        const resize = () => { if (desktop.matches) setOpen(false); };
+        document.addEventListener("keydown", dismiss);
+        document.addEventListener("pointerdown", dismiss);
+        desktop.addEventListener("change", resize);
+        return () => {
+            document.removeEventListener("keydown", dismiss);
+            document.removeEventListener("pointerdown", dismiss);
+            desktop.removeEventListener("change", resize);
+        };
+    }, [open]);
+
+    const navigation = () => links.map(([href, label]) => (
+        <Link key={href} href={href} className={pathname === href ? "active" : ""}
+            aria-current={pathname === href ? "page" : undefined} onClick={() => setOpen(false)}>
+            <span>{label}</span>
+        </Link>
+    ));
 
     return (
-        <div className="cep-header container">
-            <Image src={"/logo.png"} alt="Logo" width={"67"} height={"62"} priority={true} />
-            <div className="cep-header-menu">
-                <MenuBar />
+        <header className={`cep-header-shell${scrolled ? " is-scrolled" : ""}`}>
+            <Motion />
+            <div className="cep-header container" data-entrance="nav">
+                <Image src="/logo.png" alt="Logo" width={67} height={62} priority />
+                <nav className="cep-header-menu" aria-label="Main navigation">{navigation()}</nav>
+                <button ref={toggle} type="button" className="cep-menu-toggle" aria-label={open ? "Close menu" : "Open menu"}
+                    aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>
+                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                        <path d={open ? "M6 6l12 12M18 6L6 18" : "M4 6h16M4 12h16M4 18h16"} />
+                    </svg>
+                </button>
+                <nav ref={menu} id="mobile-navigation" className={`cep-mobile-nav${open ? " is-open" : ""}`}
+                    aria-label="Mobile navigation" inert={open ? undefined : ""}>{navigation()}</nav>
             </div>
-            <div className="cep-header-mobile" style={{ width: `${sideBar}%` }}>
-                <Button variant="light" className="cep-close-button" onClick={() => closeSideBarMenu()}>&times;</Button>
-                <MenuBar />
-            </div>
-            <ReactSVG src={"/svg/burger.svg"} className="cep-header-burger" onClick={() => openSideBarMenu()} />
-        </div>
-    )
+        </header>
+    );
 }

@@ -13,7 +13,7 @@ export default function FooterComponents() {
                         <h3>PT. Segen Digital Indonesia</h3>
                     </div>
                     <p>
-                        We specialize in cutting-edge solutions in Innovative Web, Mobile & Blockchain Development. We transform ideas into impactful web platforms, seamless mobile applications, and secure blockchain solutions.
+                        We specialize in cutting-edge solutions in Innovative Web & Mobile Development. We transform ideas into impactful web platforms and seamless mobile applications.
                     </p>
                 </div>
                 <div className="cep-footer-menu">
@@ -31,7 +31,7 @@ export default function FooterComponents() {
                         <span>Contact Us</span>
                     </Link>
                 </div>
-                <div className="cep-footer-contact">
+                <div className="cep-footer-contact" data-reveal="contact">
                     <h3>Contact Us :</h3>
                     <div className="cep-footer-contact-list">
                         <div className="cep-footer-contact-list-img">
@@ -40,12 +40,12 @@ export default function FooterComponents() {
                         <p>+62 852-8326-6184</p>
                     </div>
                     <div className="cep-footer-contact-list">
-                        <div className="cep-footer-contact-list-img">
+                        {/* <div className="cep-footer-contact-list-img">
                             <Image src={"/message.png"} alt="Message" width={"20"} height={"20"} />
-                        </div>
-                        <Link href={"mailto:admin@segendigitalindonesia.id"}>
+                        </div> */}
+                        {/* <Link href={"mailto:admin@segendigitalindonesia.id"}>
                             <p className="text-underline">admin@segendigitalindonesia.id</p>
-                        </Link>
+                        </Link> */}
                     </div>
                     <div className="cep-footer-contact-list">
                         <div className="cep-footer-contact-list-img">

@@ -1,0 +1,222 @@
+// Additive polish: existing brand, content and page structure stay intact.
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+body { background-image: radial-gradient(ellipse at 85% 12%, rgba(249,197,84,.055), transparent 40%); }
+main { min-width: 0; }
+img { max-width: 100%; }
+a, button, input, textarea { -webkit-tap-highlight-color: rgba(249,197,84,.2); }
+a, button { transition: color .2s ease, background-color .2s ease, opacity .2s ease, transform .2s ease, box-shadow .2s ease; }
+:where(a, button, input, textarea):focus-visible { outline: 3px solid #f9c554; outline-offset: 5px; }
+button { cursor: pointer; }
+button:active { transform: translateY(1px); }
+h1, h2 { letter-spacing: -.035em; line-height: 1.18; text-wrap: balance; }
+p { line-height: 1.75; }
+.cep-header-shell {
+    position: sticky; top: 0; z-index: 100; margin-bottom: 2.5rem;
+    background: rgba(22,28,40,.96); border-bottom: 1px solid transparent;
+    transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease;
+    &.is-scrolled { background: #161c28; border-color: rgba(249,197,84,.15); box-shadow: 0 8px 28px rgba(0,0,0,.16); }
+    .cep-header { position: relative; margin-bottom: 0; padding: 18px 12px; }
+    .cep-header-menu a {
+        position: relative; padding: 8px 0; border: 0;
+        &::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: #f9c554; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+        &:hover::after, &:focus-visible::after, &.active::after { transform: scaleX(1); }
+    }
+}
+.cep-menu-toggle, .cep-mobile-nav { display: none; }
+.cep-content-welcome { gap: 2rem; }
+.cep-content .cep-content-welcome {
+    > div { min-width: 0; flex: 1; }
+    .cep-content-welcome-left {
+        h1 { width: auto; font-size: clamp(2rem, 4vw, 3.125rem); }
+        p { width: auto; max-width: 29rem; color: #d5dae4; margin-top: 2rem; }
+        img { height: auto; }
+    }
+    .cep-content-welcome-right img { width: 100%; height: auto; filter: drop-shadow(0 18px 35px rgba(0,0,0,.14)); }
+}
+.cep-content-feature .row { row-gap: 1.5rem; }
+.cep-content-feature .row > div { display: flex; }
+.cep-content .cep-content-feature .cep-content-feature-item { height: 100%; padding: 1.5rem 1.75rem; }
+.cep-content-feature-item, .cep-service-feature-desc {
+    border: 1px solid rgba(255,255,255,.065); box-shadow: 0 12px 28px rgba(0,0,0,.1);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    img { transition: transform .3s ease; }
+}
+.cep-service .cep-service-feature .cep-service-feature-desc { padding: 2rem; }
+.cep-service-feature .row { align-items: stretch; }
+.cep-service-feature-img { min-height: 220px; position: relative; }
+.cep-service-feature-img img { transition: transform .3s ease; }
+.cep-content-partner-logo { flex-wrap: wrap; padding-top: 2rem; }
+.cep-about .cep-about-welcome h1, .cep-service .cep-service-welcome h1 { width: 100%; max-width: 828px; }
+.cep-about-vision-overlay { pointer-events: none; }
+.cep-about-vision .row { position: relative; }
+.cep-about-vision .row img, .cep-about-values img, .cep-contact-img img { width: 100%; height: auto; }
+.cep-contact-form input, .cep-contact-form textarea { transition: border-color .2s ease, box-shadow .2s ease; }
+.cep-contact-form input:focus, .cep-contact-form textarea:focus { border-color: #f9c554; box-shadow: 0 0 0 4px rgba(249,197,84,.1); }
+.cep-contact-form textarea { resize: vertical; }
+.cep-contact-form input::placeholder, .cep-contact-form textarea::placeholder { color: #adb5c3; opacity: 1; }
+.cep-contact-form button { box-shadow: 0 5px 18px rgba(248,139,48,.15); }
+.cep-footer { border-top: 1px solid rgba(249,197,84,.1); }
+.cep-footer .container { display: grid; grid-template-columns: 1.5fr .65fr 1.2fr .8fr; gap: 2rem; }
+.cep-footer .container > div { min-width: 0; }
+.cep-footer-contact-list-img { flex: 0 0 32px; }
+.cep-footer-social-logo { flex-wrap: wrap; }
+@media (hover: hover) and (pointer: fine) {
+    .cep-content-feature-item:hover, .cep-service-feature-desc:hover { transform: translateY(-5px); border-color: rgba(249,197,84,.4); box-shadow: 0 18px 36px rgba(0,0,0,.2); }
+    .cep-content-feature-item:hover img { transform: translateY(-3px) scale(1.035); }
+    .cep-service-feature .row:hover .cep-service-feature-img img { transform: translateY(-3px); }
+    .cep-contact-form button:hover, .cep-footer-social-logo a:hover { transform: translateY(-2px); }
+    .cep-footer-menu a:hover span { color: #f9c554; }
+}
+@media (max-width: 991.98px) {
+    .cep-footer .container { grid-template-columns: 1fr 1fr; }
+    .cep-about .cep-about-vision { padding: 2rem; }
+    .cep-about .cep-about-vision .cep-about-vision-box { padding: 1.5rem; h3 { font-size: 2rem; } }
+    .cep-content .cep-content-feature .cep-content-feature-item { padding: 1.25rem; p { font-size: 1rem; } }
+}
+@media (max-width: 767.98px) {
+    .cep-header-shell .cep-header { padding: 12px 24px; }
+    .cep-header-shell .cep-header-menu { display: none; }
+    .cep-menu-toggle { display: grid; place-items: center; width: 44px; height: 44px; background: transparent; color: #f9c554; border: 1px solid rgba(249,197,84,.35); border-radius: 10px; font-size: 26px; }
+    .cep-mobile-nav {
+        display: flex; flex-direction: column; position: absolute; top: 100%; left: 12px; right: 12px;
+        padding: 1rem; background: #222938; border: 1px solid rgba(249,197,84,.2); border-radius: 14px;
+        box-shadow: 0 16px 30px rgba(0,0,0,.25); opacity: 0; visibility: hidden; transform: translateY(-8px);
+        transition: opacity .25s ease, transform .25s ease, visibility .25s;
+        &.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+        a { color: white; padding: 12px 16px; border-radius: 8px; }
+        a.active { color: #f9c554; background: rgba(249,197,84,.07); }
+    }
+    .cep-content-welcome { flex-direction: column; }
+    .cep-content .cep-content-welcome .cep-content-welcome-left { h1, p { width: auto !important; } }
+    .cep-about .cep-about-welcome { h1, p { width: 100% !important; } }
+    .cep-service .cep-service-welcome h1 { width: 100% !important; }
+    .cep-service-feature .row > div { width: 100%; }
+    .cep-service-feature .row { row-gap: 1rem; }
+    .cep-service-feature-img { min-height: 0; }
+    .cep-service .cep-service-feature .cep-service-feature-desc { padding: 1.5rem; h3 { font-size: 1.25rem !important; } p { font-size: .9375rem !important; } }
+    .cep-contact .row { row-gap: 2rem; }
+    .cep-footer .container { gap: 2rem !important; }
+}
+@media (max-width: 575.98px) {
+    .cep-footer .container { grid-template-columns: 1fr; }
+    .cep-content-partner-logo img { max-width: 28%; }
+    .cep-content .cep-content-welcome .cep-content-welcome-left { padding: 0 18px; }
+    .cep-about, .cep-service { padding-left: 12px; padding-right: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+// Partner lockup follows the Partituro login identity without an icon dependency.
+.cep-content .cep-content-partner .cep-content-partner-logo {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: center;
+    justify-items: center;
+    gap: 2rem;
+
+    > img { transition: transform .2s ease; }
+
+    .cep-partner-partituro {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -.025em;
+        line-height: 1.4;
+        white-space: nowrap;
+        text-decoration: none;
+        border-radius: 16px;
+
+        .cep-partner-partituro-icon {
+            display: grid;
+            place-items: center;
+            flex: 0 0 44px;
+            width: 44px;
+            height: 44px;
+            border-radius: 16px;
+            background: #6ee7b7;
+        }
+
+        img { width: 23px; height: 23px; max-width: none; }
+    }
+}
+@media (max-width: 991.98px) {
+    .cep-content .cep-content-partner .cep-content-partner-logo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem 1rem;
+        > img { max-width: 100%; height: auto; }
+    }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .cep-content-partner-logo > img:hover,
+    .cep-content-partner-logo .cep-partner-partituro:hover { transform: translateY(-2px); }
+}
+
+// Three retained services share one responsive card layout.
+.cep-service .cep-service-grid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+
+    .cep-service-card {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background: #222938;
+        border: 1px solid rgba(255,255,255,.065);
+        box-shadow: 0 12px 28px rgba(0,0,0,.1);
+        transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .cep-service-card-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+    .cep-service-feature-desc {
+        flex: 1;
+        height: auto;
+        padding: 1.5rem;
+        justify-content: flex-start;
+        border: 0;
+        box-shadow: none;
+        background: transparent;
+        transform: none;
+        h3 { font-size: clamp(1.25rem, 2vw, 1.625rem); }
+        p { font-size: 1rem; margin-bottom: 0; }
+    }
+}
+@media (max-width: 991.98px) {
+    .cep-service .cep-service-grid { grid-template-columns: 1fr; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .cep-service .cep-service-grid .cep-service-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(249,197,84,.4);
+        box-shadow: 0 18px 36px rgba(0,0,0,.2);
+    }
+}
+
+// Viewport + element-size fallback starts before hydration; resting styles stay normal.
+[data-page-enter] { overflow-x: clip; }
+@keyframes cep-offscreen-enter {
+    from { transform: translate(var(--cep-enter-x, 0px), var(--cep-enter-y, 0px)); }
+    to { transform: translate(0px, 0px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+    [data-entrance] {
+        animation: cep-offscreen-enter var(--cep-enter-duration, 1600ms) cubic-bezier(0.45,0,0.25,1) backwards;
+    }
+    [data-entrance="nav"] { --cep-enter-y: -100%; --cep-enter-duration: 1100ms; }
+    [data-entrance="heading"] { --cep-enter-x: calc(-100vw - 100%); animation-delay: 150ms; }
+    [data-entrance="description"] { --cep-enter-x: calc(-100vw - 100%); --cep-enter-duration: 1500ms; animation-delay: 350ms; }
+    [data-entrance="image"] { --cep-enter-x: 100vw; --cep-enter-duration: 1700ms; animation-delay: 400ms; }
+    [data-entrance="cta"] { --cep-enter-y: calc(100vh + 100%); --cep-enter-duration: 1400ms; animation-delay: 650ms; }
+}
